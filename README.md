@@ -20,6 +20,33 @@ It also supports the timer record for the Fluent robot.
 pip install dioscuri
 ```
 
+### Install from source
+
+If you have forked the repository and want to work from the source code, install the
+package in editable mode so changes to the code are picked up immediately:
+
+```bash
+git clone https://github.com/<your-account>/Dioscuri.git
+cd Dioscuri
+python -m venv .venv
+source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+pip install -e .
+```
+
+The development dependencies used in our CI (linters, test tools, etc.) can be
+installed with:
+
+```bash
+pip install -e .[dev]
+```
+
+You can then run the test suite locally to confirm everything builds and the
+package imports correctly:
+
+```bash
+pytest
+```
+
 ## Usage
 
 ```python
